@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useEffect, useCallback } from "react";
 import styles from "../styles/Home.module.css";
 import { useWeb3React } from "@web3-react/core";
 import { Connector } from "../config/web3";
 
 export default function Home() {
-  const { activate, active, error, account, deactivate, chainId } =
+  const { activate, active, error,library, account, deactivate, chainId } =
     useWeb3React();
 
   const Connect = useCallback(() => {
